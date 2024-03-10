@@ -47,17 +47,14 @@ const Main = () => {
             </div>
             {/* resume download button */}
             <div className="py-3 justify-center flex">
-              <button className="px-12 flex justify-center items-center bg-[#0e7490] hover:scale-110 hover:bg-[#0e7490] ease-in duration-300 ">
-                <p className="mr-4 text-lg">
-                  <a
-                    href="https://drive.google.com/file/d/13aYpHmtiDrqAmMF6lQlsCKMATyc-pEb1/view?usp=sharing"
-                    target="_blank"
-                  >
-                    Resume
-                  </a>
-                </p>
-                <FaFileDownload className="text-white justify-center" />
-              </button>
+              <a
+                className="resume-button"
+                href="https://drive.google.com/file/d/13aYpHmtiDrqAmMF6lQlsCKMATyc-pEb1/view?usp=sharing"
+                target="_blank"
+              >
+                Resume
+                <FaFileDownload className="text-white justify-center ml-4" />
+              </a>
             </div>
           </div>
         </div>

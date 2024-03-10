@@ -13,17 +13,16 @@ const resume = () => {
     <div className="max-w-[940px] mx-auto p-2 pt-[120px]">
       <div className="flex justify-between">
         <h2 className="items-center flex">Resume</h2>
-        <button className="px-10 flex justify-center shadow-lg items-center text-black bg-[#d0d4d6] hover:scale-110 hover:bg-[#c0c0c0] ease-in duration-300 ">
-          <p className="mr-4">
-            <a
-              href="https://drive.google.com/file/d/13aYpHmtiDrqAmMF6lQlsCKMATyc-pEb1/view?usp=sharing"
-              target="_blank"
-            >
-              Resume
-            </a>
-          </p>
-          <FaFileDownload className="justify-center" />
-        </button>
+        <div className="py-3 justify-center flex">
+          <a
+            className="px-10 py-2 flex justify-center items-center rounded-full shadow-lg shadow-gray-400 font-bold text-lg text-black ease-in duration-300 bg-[#d0d4d6] hover:scale-110 hover:bg-[#c0c0c0]"
+            href="https://drive.google.com/file/d/13aYpHmtiDrqAmMF6lQlsCKMATyc-pEb1/view?usp=sharing"
+            target="_blank"
+          >
+            Resume
+            <FaFileDownload className="justify-center ml-4" />
+          </a>
+        </div>
       </div>
       <div className="bg-[#d0d4d6] my-4 p-4 w-full flex justify-between items-center">
         <h2 className="text-center">Anmol Goyal</h2>
