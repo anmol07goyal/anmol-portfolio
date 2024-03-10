@@ -19,17 +19,17 @@ const About = () => {
           <div className="col-span-2 py-4 lg:text-lg md:text-lg">
             <p>Greetings!</p>
             <p className="py-2 text-gray-600 text-justify">
-              I'm Anmol, a game developer with a dynamic journey. From solo
+              I&apos;m Anmol, a game developer with a dynamic journey. From solo
               coding in my room to collaborating with top-tier teams, my
               experience spans over three years. Armed with a Computer Science
-              degree from Panjab University, I've directed narrative-based games
-              and embraced the immersive world of VR, notably with projects on
-              Meta Quest 2.
+              degree from Panjab University, I&apos;ve directed narrative-based
+              games and embraced the immersive world of VR, notably with
+              projects on Meta Quest 2.
             </p>
             <p className="py-2 text-gray-600 text-justify">
               My global perspective comes from graduating from a VR Production
-              program in Canada. Eager for the next adventure, I'm passionate
-              about crafting impactful gaming experiences.
+              program in Canada. Eager for the next adventure, I&apos;m
+              passionate about crafting impactful gaming experiences.
             </p>
             <Link href="/#projects">
               <p className="py-2 text-gray-600 underline cursor-pointer">

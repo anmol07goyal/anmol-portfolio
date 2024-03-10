@@ -123,10 +123,10 @@ const resume = () => {
               <span className=" absolute text-3xl left-0 top-2 transform -translate-y-1/2">
                 &#8226;
               </span>
-              Played a pivotal role in uplifting game's graphics and lighting,
-              by cooperating with art and design teams, leading to a 20%
-              enrichment in visual quality and contributing to a more immersive
-              player experience.
+              Played a pivotal role in uplifting game&apos;s graphics and
+              lighting, by cooperating with art and design teams, leading to a
+              20% enrichment in visual quality and contributing to a more
+              immersive player experience.
             </li>
             <li>
               <span className=" absolute text-3xl left-0 top-2 transform -translate-y-1/2">
@@ -350,8 +350,8 @@ const resume = () => {
                   &#8226;
                 </span>
                 Spearheaded development of multiplayer feature for 2D table
-                tennis game, 'Ping Pong Mania,' resulting in a 40% increase in
-                player engagement and a doubling of concurrent user
+                tennis game, &apos;Ping Pong Mania&apos;, resulting in a 40%
+                increase in player engagement and a doubling of concurrent user
                 interactions.
               </li>
               <li>

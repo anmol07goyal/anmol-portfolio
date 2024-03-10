@@ -35,11 +35,11 @@ const ProjectItem = ({ project, thumbnail, projectUrl }) => {
         >
           <div className="grid grid-rows-2 gap-12">
             <div>
-              <a href={project.codeLink} target="_blank" rel="noreferrer">
+              {/* <a href={project.codeLink} target="_blank" rel="noreferrer">
                 <button className="px-8 py-2 mr-8 bg-[#0e7490] hover:scale-110 hover:bg-[#0e7490] ease-in duration-300">
                   Code
                 </button>
-              </a>
+              </a> */}
               <a
                 href="https://property-finder-development.web.app/"
                 target="_blank"

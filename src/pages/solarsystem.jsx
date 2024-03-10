@@ -32,7 +32,7 @@ const solarsystem = () => {
           </Link>
 
           <div className="py-8">
-            <a
+            {/* <a
               href="https://github.com/fireclint/property-finder"
               target="_blank"
               rel="noreferrer"
@@ -40,7 +40,7 @@ const solarsystem = () => {
               <button className="px-8 py-2 mt-4 mr-8 bg-[#0e7490] hover:scale-110 hover:bg-[#0e7490] ease-in duration-300">
                 Code
               </button>
-            </a>
+            </a> */}
             <a
               href="https://property-finder-development.web.app/"
               target="_blank"
@@ -67,13 +67,13 @@ const solarsystem = () => {
             <ul>
               <li>
                 <span>&#8226;</span>
-                Crafting and optimizing the app's control mechanics for a
+                Crafting and optimizing the app&apos;s control mechanics for a
                 user-friendly interface.
               </li>
               <li>
                 <span>&#8226;</span>
                 Seamless integration of Unity In-App Purchases to enhance the
-                game's functionality.
+                game&apos;s functionality.
               </li>
               <li>
                 <span>&#8226;</span>
