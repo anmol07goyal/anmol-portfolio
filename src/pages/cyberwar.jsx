@@ -58,10 +58,7 @@ const cyberwar = () => {
 
           <div className="project-desc">
             <p>
-              I oversaw the programming for LearnFest, a web-based learning
-              application, with an emphasis on presenting educational content
-              using cutting-edge 2D and 3D simulations. Among my main
-              contributions are:
+            In my role as a game programmer for a 2D platformer game centered around cybersecurity, I spearheaded various programming initiatives to ensure a seamless and engaging player experience. Notable contributions include::
             </p>
             <ul>
               <li>
