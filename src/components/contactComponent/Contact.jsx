@@ -31,7 +31,7 @@ const Contact = () => {
                 <p className="flex justify-center items-center ">
                   Game Programmer
                 </p>
-                <p className="flex p-4 justify-center items-center">
+                <p className="flex p-4 justify-center items-center text-center">
                   I am available for freelance or full-time positions. Contact
                   me and let&apos;s talk.
                 </p>

@@ -1,10 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn, FaFileDownload } from "react-icons/fa";
 import { Roboto_Condensed } from "next/font/google";
-import { useRouter } from "next/router";
 
 const roboto_condensed = Roboto_Condensed({
   subsets: ["latin"],
@@ -14,9 +12,6 @@ const roboto_condensed = Roboto_Condensed({
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState("#ecf0f3");
-  const [linkColor, setLinkColor] = useState("#1f2937");
-  const router = useRouter();
 
   const handleSideNavbar = () => {
     setNav(!nav);
@@ -33,19 +28,9 @@ const Navbar = () => {
     window.addEventListener("scroll", handleShadow);
   }, []);
 
-  useEffect(() => {
-    if (router.asPath === "/project") {
-      setNavBg("transparent");
-      setLinkColor("#ecf0f3");
-    } else {
-      setNavBg("#ecf0f3");
-      setLinkColor("#1f2937");
-    }
-  }, [router]);
-
   return (
     <div
-      style={{ backgroundColor: `${navBg}` }}
+      style={{ backgroundColor: "#ecf0f3" }}
       className={
         shadow
           ? "fixed top-0 w-full h-16 shadow-xl z-[100] ease-in-out duration-300"
@@ -53,34 +38,44 @@ const Navbar = () => {
       }
     >
       <div className="flex justify-start items-center w-full h-full px-2">
-        <div>
-          <ul
-            style={{ color: `${linkColor}` }}
-            className="hidden md:flex xl:ml-[48%] ease-in duration-300"
-          >
+        <ul
+          style={{ color: "#1f2937" }}
+          className="hidden md:flex ease-in duration-300 justify-center text-center w-full"
+        >
+          <Link href="/">
             <li className="text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
-              <Link href="/">Home</Link>
+              Home
             </li>
+          </Link>
+          <Link href="/#about">
             <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[rgb(14,116,144)]">
-              <Link href="/#about">About</Link>
+              About
             </li>
+          </Link>
+          <Link href="/#skills">
             <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
-              <Link href="/#skills">Skills</Link>
+              Skills
             </li>
+          </Link>
+          <Link href="/#projects">
             <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
-              <Link href="/#projects">Projects</Link>
+              Projects
             </li>
+          </Link>
+          <Link href="/resume">
             <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
-              <Link href="/resume">Resume</Link>
+              Resume
             </li>
+          </Link>
+          <Link href="/#contact">
             <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
-              <Link href="/#contact">Contact</Link>
+              Contact
             </li>
-          </ul>
-          {/* Hamburger Icon */}
-          <div onClick={handleSideNavbar} className="md:hidden cursor-pointer">
-            <AiOutlineMenu size={25} />
-          </div>
+          </Link>
+        </ul>
+        {/* Hamburger Icon */}
+        <div onClick={handleSideNavbar} className="md:hidden cursor-pointer">
+          <AiOutlineMenu size={25} />
         </div>
       </div>
 
@@ -201,17 +196,14 @@ const Navbar = () => {
                   </div>
                   {/* resume download button */}
                   <div className="py-3 justify-center flex">
-                    <button className="px-12 flex justify-center items-center bg-[#0e7490] hover:scale-110 hover:bg-[#0e7490] ease-in duration-300 ">
-                      <p className="mr-4 text-lg">
-                        <a
-                          href="https://drive.google.com/file/d/13aYpHmtiDrqAmMF6lQlsCKMATyc-pEb1/view?usp=sharing"
-                          target="_blank"
-                        >
-                          Resume
-                        </a>
-                      </p>
-                      <FaFileDownload className="text-white justify-center" />
-                    </button>
+                    <a
+                      className="resume-button"
+                      href="https://drive.google.com/file/d/13aYpHmtiDrqAmMF6lQlsCKMATyc-pEb1/view?usp=sharing"
+                      target="_blank"
+                    >
+                      Resume
+                      <FaFileDownload className="text-white justify-center ml-4" />
+                    </a>
                   </div>
                 </div>
               </div>
