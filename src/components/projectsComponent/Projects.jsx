@@ -22,6 +22,21 @@ const Projects = () => {
         <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-4 mt-4">
           {/* Projects */}
           <ProjectItem
+            project={GameProjectsInfo.Details.PhobiaVoyage}
+            thumbnail={phobiaVoyage}
+            projectUrl="/phobiavoyage"
+          />
+          <ProjectItem
+            project={GameProjectsInfo.Details.PingPongMania}
+            thumbnail={pingPongMania}
+            projectUrl="/pingpong"
+          />
+          <ProjectItem
+            project={GameProjectsInfo.Details.SolarSystem}
+            thumbnail={solarSystem}
+            projectUrl="/solarsystem"
+          />
+          <ProjectItem
             project={GameProjectsInfo.Details.CyberWar}
             thumbnail={cyberWar}
             projectUrl="/cyberwar"
@@ -32,24 +47,9 @@ const Projects = () => {
             projectUrl="/learnfest"
           />
           <ProjectItem
-            project={GameProjectsInfo.Details.PingPongMania}
-            thumbnail={pingPongMania}
-            projectUrl="/pingpong"
-          />
-          <ProjectItem
             project={GameProjectsInfo.Details.SuperHeroRun}
             thumbnail={superHeroRun}
             projectUrl="/superherorun"
-          />
-          <ProjectItem
-            project={GameProjectsInfo.Details.PhobiaVoyage}
-            thumbnail={phobiaVoyage}
-            projectUrl="/phobiavoyage"
-          />
-          <ProjectItem
-            project={GameProjectsInfo.Details.SolarSystem}
-            thumbnail={solarSystem}
-            projectUrl="/solarsystem"
           />
         </div>
       </div>
