@@ -26,7 +26,7 @@ const ProjectItem = ({ project, thumbnail, projectUrl }) => {
         <h3 className="mb-4 text-[20px] text-[#0e7490] items-start">
           {project.name}
         </h3>
-        <p className="text-justify">{project.shortDesc}</p>
+        <p className="text-left">{project.shortDesc}</p>
       </div>
       {showReadMore && (
         <div
