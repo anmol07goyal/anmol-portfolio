@@ -62,11 +62,11 @@ const Navbar = () => {
               Projects
             </li>
           </Link>
-          <Link href="/resume">
+          {/* <Link href="/resume">
             <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
               Resume
             </li>
-          </Link>
+          </Link> */}
           <Link href="/#contact">
             <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
               Contact
@@ -143,14 +143,14 @@ const Navbar = () => {
                   Projects
                 </li>
               </Link>
-              <Link href="/resume">
+              {/* <Link href="/resume">
                 <li
                   onClick={() => setNav(false)}
                   className="pt-6 text-sm border-b border-gray-300 hover:border-l-4 hover:border-[#0e7490] hover:border-y-0"
                 >
                   Resume
                 </li>
-              </Link>
+              </Link> */}
               <Link href="/#contact">
                 <li
                   onClick={() => setNav(false)}
