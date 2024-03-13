@@ -4,6 +4,7 @@ import Link from "next/link";
 import solarSystemImg from "../../public/assets/projects/solar/thumbnail.png";
 import solarCollage from "../../public/assets/projects/solar/collage.png";
 import GameProjectsInfo from "@/components/projectsComponent/GameProjectsInfo";
+import ProjectHeader from "@/components/projectsComponent/ProjectHeader";
 
 const solarsystem = () => {
   const solarSystemProject = GameProjectsInfo.Details.SolarSystem;
@@ -26,31 +27,10 @@ const solarsystem = () => {
 
       <div className="max-w-[1240px] mx-auto p-2 grid gap-8 py-8">
         <div>
-          <Link href="/#projects" className="flex">
-            <span>&lt;</span>
-            <p className="underline cursor-pointer px-1"> Back</p>
-          </Link>
-
-          <div className="py-8">
-            {/* <a
-              href="https://github.com/fireclint/property-finder"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="px-8 py-2 mt-4 mr-8 bg-[#0e7490] hover:scale-110 hover:bg-[#0e7490] ease-in duration-300">
-                Code
-              </button>
-            </a> */}
-            <a
-              href="https://property-finder-development.web.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="px-8 py-2 mt-4 bg-[#0e7490] hover:scale-110 hover:bg-[#0e7490] ease-in duration-300">
-                Demo
-              </button>
-            </a>
-          </div>
+          <ProjectHeader
+            codeLink={solarSystemProject.codeLink}
+            demoLink={solarSystemProject.demoLink}
+          />
 
           <h2>Overview</h2>
           <p className="py-4 text-xl text-justify">
@@ -105,13 +85,11 @@ const solarsystem = () => {
         />
 
         <div className="flex justify-between w-full">
-          <Link href="/phobiavoyage">
+          <Link href="/pingpong">
             <p className="underline cursor-pointe">Previous Project</p>
           </Link>
-          <Link href="#" className="pointer-events-none">
-            <p className="underline cursor-pointer  text-gray-400">
-              Next Project
-            </p>
+          <Link href="/cyberwar">
+            <p className="underline cursor-pointer">Next Project</p>
           </Link>
         </div>
       </div>

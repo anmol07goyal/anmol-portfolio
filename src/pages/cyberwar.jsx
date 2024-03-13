@@ -4,6 +4,7 @@ import Link from "next/link";
 import cyberWarImg from "../../public/assets/projects/cyber-war/thumbnail.png";
 import cyberWarCollage from "../../public/assets/projects/cyber-war/collage.png";
 import GameProjectsInfo from "@/components/projectsComponent/GameProjectsInfo";
+import ProjectHeader from "@/components/projectsComponent/ProjectHeader";
 
 const cyberwar = () => {
   const cyberWarProject = GameProjectsInfo.Details.CyberWar;
@@ -25,31 +26,10 @@ const cyberwar = () => {
 
       <div className="max-w-[1240px] mx-auto p-2 grid gap-8 py-8">
         <div>
-          <Link href="/#projects" className="flex">
-            <span>&lt;</span>
-            <p className="underline cursor-pointer px-1"> Back</p>
-          </Link>
-
-          <div className="py-8">
-            {/* <a
-              href="https://github.com/fireclint/property-finder"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="px-8 py-2 mt-4 mr-8 bg-[#0e7490] hover:scale-110 hover:bg-[#0e7490] ease-in duration-300 shadow-lg">
-                Code
-              </button>
-            </a> */}
-            <a
-              href="https://property-finder-development.web.app/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="px-8 py-2 mt-4 bg-[#0e7490] hover:scale-110 hover:bg-[#0e7490] ease-in duration-300 shadow-lg">
-                Demo
-              </button>
-            </a>
-          </div>
+          <ProjectHeader
+            codeLink={cyberWarProject.codeLink}
+            demoLink={cyberWarProject.demoLink}
+          />
 
           <h2>Overview</h2>
           <p className="py-4 text-xl text-justify">
@@ -58,7 +38,10 @@ const cyberwar = () => {
 
           <div className="project-desc">
             <p>
-            In my role as a game programmer for a 2D platformer game centered around cybersecurity, I spearheaded various programming initiatives to ensure a seamless and engaging player experience. Notable contributions include::
+              In my role as a game programmer for a 2D platformer game centered
+              around cybersecurity, I spearheaded various programming
+              initiatives to ensure a seamless and engaging player experience.
+              Notable contributions include::
             </p>
             <ul>
               <li>
@@ -123,10 +106,8 @@ const cyberwar = () => {
         <Image src={cyberWarCollage} alt="/" />
 
         <div className="flex justify-between w-full">
-          <Link href="#" className="pointer-events-none">
-            <p className="underline cursor-pointer text-gray-400">
-              Previous Project
-            </p>
+          <Link href="/solarsystem">
+            <p className="underline cursor-pointe">Previous Project</p>
           </Link>
           <Link href="/learnfest">
             <p className="underline cursor-pointer">Next Project</p>
