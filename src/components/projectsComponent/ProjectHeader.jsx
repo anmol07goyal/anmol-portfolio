@@ -10,7 +10,7 @@ const ProjectHeader = ({ codeLink, demoLink }) => {
       </Link>
       <div className="py-8">
         {/* <a
-          href="https://github.com/fireclint/property-finder"
+          href={codeLink}
           target="_blank"
           rel="noreferrer"
         >
