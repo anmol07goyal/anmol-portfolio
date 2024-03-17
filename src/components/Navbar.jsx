@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn, FaFileDownload } from "react-icons/fa";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import { Roboto_Condensed } from "next/font/google";
 
 const roboto_condensed = Roboto_Condensed({
@@ -12,6 +13,7 @@ const roboto_condensed = Roboto_Condensed({
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [showProjectsDd, setShowProjectsDd] = useState(false);
 
   const handleSideNavbar = () => {
     setNav(!nav);
@@ -27,6 +29,43 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleShadow);
   }, []);
+
+  const ProjectsDropdown = () => {
+    return (
+      <ul>
+        <Link href="/phobiavoyage">
+          <li className="border-b" onClick={() => setNav(false)}>
+            VR Phobia Voyage
+          </li>
+        </Link>
+        <Link href="/pingpong">
+          <li className="border-b" onClick={() => setNav(false)}>
+            Ping Pong Mania
+          </li>
+        </Link>
+        <Link href="/solarsystem">
+          <li className="border-b" onClick={() => setNav(false)}>
+            AR Solar System
+          </li>
+        </Link>
+        <Link href="/cyberwar">
+          <li className="border-b" onClick={() => setNav(false)}>
+            Cyber War
+          </li>
+        </Link>
+        <Link href="/learnfest">
+          <li className="border-b" onClick={() => setNav(false)}>
+            Kompanions Learnfest
+          </li>
+        </Link>
+        <Link href="/superherorun">
+          <li className="border-b" onClick={() => setNav(false)}>
+            Super Hero Run
+          </li>
+        </Link>
+      </ul>
+    );
+  };
 
   return (
     <div
@@ -57,11 +96,21 @@ const Navbar = () => {
               Skills
             </li>
           </Link>
-          <Link href="/#projects">
-            <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
-              Projects
-            </li>
-          </Link>
+          <div
+            onMouseEnter={() => setShowProjectsDd(true)}
+            onMouseLeave={() => setShowProjectsDd(false)}
+          >
+            <Link href="#projects">
+              <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
+                Projects
+              </li>
+            </Link>
+            {showProjectsDd && (
+              <div className="absolute bg-white shadow-lg shadow-gray-400">
+                <ProjectsDropdown />
+              </div>
+            )}
+          </div>
           {/* <Link href="/resume">
             <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
               Resume
@@ -135,14 +184,26 @@ const Navbar = () => {
                   Skills
                 </li>
               </Link>
-              <Link href="/#projects">
-                <li
-                  onClick={() => setNav(false)}
-                  className="pt-6 text-sm border-b border-gray-300 hover:border-l-4 hover:border-[#0e7490] hover:border-y-0"
-                >
-                  Projects
-                </li>
-              </Link>
+              <div>
+                <Link href="/#projects" className="flex items-center">
+                  <li
+                    className="pt-6 text-sm border-b border-gray-300 hover:border-l-4 hover:border-[#0e7490] hover:border-y-0 grid grid-cols-2 w-full"
+                    onClick={() => setNav(false)}
+                  >
+                    Projects
+                  </li>
+                  <RiArrowDropDownLine
+                    size={30}
+                    onClick={() => setShowProjectsDd(!showProjectsDd)}
+                    className="cursor-pointer"
+                  />
+                </Link>
+                {showProjectsDd && (
+                  <div className="text-sm pl-6 bg-gray-200 border-l-2 border-l-[#0e7490]">
+                    <ProjectsDropdown />
+                  </div>
+                )}
+              </div>
               {/* <Link href="/resume">
                 <li
                   onClick={() => setNav(false)}
