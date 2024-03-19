@@ -100,7 +100,7 @@ const Navbar = () => {
             onMouseEnter={() => setShowProjectsDd(true)}
             onMouseLeave={() => setShowProjectsDd(false)}
           >
-            <Link href="#projects">
+            <Link href="/#projects">
               <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
                 Projects
               </li>

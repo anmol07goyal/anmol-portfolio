@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProjectItem = ({ project, thumbnail, projectUrl }) => {
+const ProjectItem = ({ project }) => {
   const [showReadMore, setShowReadMore] = useState(false);
+  console.log("hiii,  in projetc item");
 
   return (
     <div
@@ -17,7 +18,7 @@ const ProjectItem = ({ project, thumbnail, projectUrl }) => {
         }`}
       >
         <Image
-          src={thumbnail}
+          src={project.thumbnail}
           alt={project.name}
           className="rounded-xl object-cover md:max-w-[240px] h-full opacity-90"
         />
@@ -49,12 +50,12 @@ const ProjectItem = ({ project, thumbnail, projectUrl }) => {
             <div className="flex justify-center">
               <Link
                 className="rounded-full w-fit px-4 shadow-xl shadow-gray-300 font-bold bg-white text-black border-2 border-[#0e7490] flex items-center"
-                href={projectUrl}
+                href={project.projectUrl}
               >
                 Read More
               </Link>
             </div>
-          </div> 
+          </div>
         </div>
       )}
     </div>
