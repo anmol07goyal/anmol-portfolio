@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProjectItem = ({ project }) => {
+const ProjectItem = ({ project, key }) => {
   const [showReadMore, setShowReadMore] = useState(false);
-  console.log("hiii,  in projetc item");
 
   return (
     <div

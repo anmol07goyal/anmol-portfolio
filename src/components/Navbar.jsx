@@ -4,6 +4,7 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn, FaFileDownload } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { Roboto_Condensed } from "next/font/google";
+import GameProjectsInfo from "./projectsComponent/GameProjectsInfo";
 
 const roboto_condensed = Roboto_Condensed({
   subsets: ["latin"],
@@ -33,36 +34,15 @@ const Navbar = () => {
   const ProjectsDropdown = () => {
     return (
       <ul>
-        <Link href="/phobiavoyage">
-          <li className="border-b" onClick={() => setNav(false)}>
-            VR Phobia Voyage
-          </li>
-        </Link>
-        <Link href="/pingpong">
-          <li className="border-b" onClick={() => setNav(false)}>
-            Ping Pong Mania
-          </li>
-        </Link>
-        <Link href="/solarsystem">
-          <li className="border-b" onClick={() => setNav(false)}>
-            AR Solar System
-          </li>
-        </Link>
-        <Link href="/cyberwar">
-          <li className="border-b" onClick={() => setNav(false)}>
-            Cyber War
-          </li>
-        </Link>
-        <Link href="/learnfest">
-          <li className="border-b" onClick={() => setNav(false)}>
-            Kompanions Learnfest
-          </li>
-        </Link>
-        <Link href="/superherorun">
-          <li className="border-b" onClick={() => setNav(false)}>
-            Super Hero Run
-          </li>
-        </Link>
+        {Object.keys(GameProjectsInfo.Details).map((p, index) => {
+          return (
+            <Link href={GameProjectsInfo.Details[p].projectUrl} key={index}>
+              <li className="border-b" onClick={() => setNav(false)}>
+                {GameProjectsInfo.Details[p].name}
+              </li>
+            </Link>
+          );
+        })}
       </ul>
     );
   };
