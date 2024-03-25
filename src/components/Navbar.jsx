@@ -15,9 +15,14 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [showProjectsDd, setShowProjectsDd] = useState(false);
+  const [activeTab, setActiveTab] = useState("");
 
   const handleSideNavbar = () => {
     setNav(!nav);
+  };
+
+  const handleActiveTab = (tabName) => {
+    setActiveTab(tabName);
   };
 
   useEffect(() => {
@@ -61,18 +66,30 @@ const Navbar = () => {
           style={{ color: "#1f2937" }}
           className="hidden md:flex ease-in duration-300 justify-center text-center w-full"
         >
-          <Link href="/">
-            <li className="text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
+          <Link href="/" onClick={() => handleActiveTab("Home")}>
+            <li
+              className={`nav-link text-sm uppercase rounded hover:border-2 border-b-[#0e7490] ${
+                activeTab == "Home" ? "border-b-2 border-b-[#0e7490]" : ""
+              }`}
+            >
               Home
             </li>
           </Link>
-          <Link href="/#about">
-            <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[rgb(14,116,144)]">
+          <Link href="/#about" onClick={() => handleActiveTab("About")}>
+            <li
+              className={`nav-link ml-10 text-sm uppercase rounded hover:border-2 border-b-[rgb(14,116,144)] ${
+                activeTab == "About" ? "border-b-2 border-b-[#0e7490]" : ""
+              }`}
+            >
               About
             </li>
           </Link>
-          <Link href="/#skills">
-            <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
+          <Link href="/#skills" onClick={() => handleActiveTab("Skills")}>
+            <li
+              className={`nav-link ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490] ${
+                activeTab == "Skills" ? "border-b-2 border-b-[#0e7490]" : ""
+              }`}
+            >
               Skills
             </li>
           </Link>
@@ -80,8 +97,12 @@ const Navbar = () => {
             onMouseEnter={() => setShowProjectsDd(true)}
             onMouseLeave={() => setShowProjectsDd(false)}
           >
-            <Link href="/#projects">
-              <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
+            <Link href="/#projects" onClick={() => handleActiveTab("Projects")}>
+              <li
+                className={`nav-link ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490] ${
+                  activeTab == "Projects" ? "border-b-2 border-b-[#0e7490]" : ""
+                }`}
+              >
                 Projects
               </li>
             </Link>
@@ -91,13 +112,12 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          {/* <Link href="/resume">
-            <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
-              Resume
-            </li>
-          </Link> */}
-          <Link href="/#contact">
-            <li className="ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490]">
+          <Link href="/#contact" onClick={() => handleActiveTab("Contact")}>
+            <li
+              className={`nav-link ml-10 text-sm uppercase rounded hover:border-2 border-b-[#0e7490] ${
+                activeTab == "Contact" ? "border-b-2 border-b-[#0e7490]" : ""
+              }`}
+            >
               Contact
             </li>
           </Link>
@@ -140,34 +160,48 @@ const Navbar = () => {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href="/">
+              <Link href="/" onClick={() => handleActiveTab("Home")}>
                 <li
                   onClick={() => setNav(false)}
-                  className="pt-6 text-sm border-b border-gray-300 hover:border-l-4 hover:border-[#0e7490] hover:border-y-0"
+                  className={`pt-6 text-sm border-b border-gray-300 hover:border-l-3 hover:border-[#0e7490] hover:border-y-0 ${
+                    activeTab == "Home" ? "border-l-3 border-l-[#0e7490]" : ""
+                  }`}
                 >
                   Home
                 </li>
               </Link>
-              <Link href="/#about">
+              <Link href="/#about" onClick={() => handleActiveTab("About")}>
                 <li
                   onClick={() => setNav(false)}
-                  className="pt-6 text-sm border-b border-gray-300 hover:border-l-4 hover:border-[#0e7490] hover:border-y-0"
+                  className={`pt-6 text-sm border-b border-gray-300 hover:border-l-3 hover:border-[#0e7490] hover:border-y-0 ${
+                    activeTab == "About" ? "border-l-3 border-l-[#0e7490]" : ""
+                  }`}
                 >
                   About
                 </li>
               </Link>
-              <Link href="/#skills">
+              <Link href="/#skills" onClick={() => handleActiveTab("Skills")}>
                 <li
                   onClick={() => setNav(false)}
-                  className="pt-6 text-sm border-b border-gray-300 hover:border-l-4 hover:border-[#0e7490] hover:border-y-0"
+                  className={`pt-6 text-sm border-b border-gray-300 hover:border-l-3 hover:border-[#0e7490] hover:border-y-0 ${
+                    activeTab == "Skills" ? "border-l-3 border-l-[#0e7490]" : ""
+                  }`}
                 >
                   Skills
                 </li>
               </Link>
               <div>
-                <Link href="/#projects" className="flex items-center">
+                <Link
+                  href="/#projects"
+                  className="flex items-center"
+                  onClick={() => handleActiveTab("Projects")}
+                >
                   <li
-                    className="pt-6 text-sm border-b border-gray-300 hover:border-l-4 hover:border-[#0e7490] hover:border-y-0 grid grid-cols-2 w-full"
+                    className={`pt-6 text-sm border-b border-gray-300 hover:border-l-3 hover:border-[#0e7490] hover:border-y-0 grid grid-cols-2 w-full ${
+                      activeTab == "Projects"
+                        ? "border-l-3 border-l-[#0e7490]"
+                        : ""
+                    }`}
                     onClick={() => setNav(false)}
                   >
                     Projects
@@ -184,18 +218,14 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
-              {/* <Link href="/resume">
+              <Link href="/#contact" onClick={() => handleActiveTab("Contact")}>
                 <li
                   onClick={() => setNav(false)}
-                  className="pt-6 text-sm border-b border-gray-300 hover:border-l-4 hover:border-[#0e7490] hover:border-y-0"
-                >
-                  Resume
-                </li>
-              </Link> */}
-              <Link href="/#contact">
-                <li
-                  onClick={() => setNav(false)}
-                  className="pt-6 text-sm border-b border-gray-300 hover:border-l-4 hover:border-[#0e7490] hover:border-y-0"
+                  className={`pt-6 text-sm border-b border-gray-300 hover:border-l-3 hover:border-[#0e7490] hover:border-y-0 ${
+                    activeTab == "Contact"
+                      ? "border-l-3 border-l-[#0e7490]"
+                      : ""
+                  }`}
                 >
                   Contact
                 </li>

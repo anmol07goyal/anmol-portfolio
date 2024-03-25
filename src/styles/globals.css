@@ -81,12 +81,10 @@ html {
   }
 }
 
-.resume-list {
-  li {
-    @apply pt-0 pb-1 pl-6 relative cursor-default hover:bg-white;
-  }
+.resume-button {
+  @apply px-12 py-3 flex justify-center items-center rounded-full shadow-xl shadow-gray-400 font-bold text-white text-lg bg-[#0e7490] hover:scale-110 hover:bg-[#0e7490] ease-in duration-300;
 }
 
-.resume-button {
-  @apply px-12 py-3 flex justify-center items-center rounded-full shadow-xl shadow-gray-400 font-bold text-white text-lg bg-[#0e7490] hover:scale-110 hover:bg-[#0e7490] ease-in duration-300 ;
+.active {
+  @apply border-2 border-b-[#0e7490];
 }
