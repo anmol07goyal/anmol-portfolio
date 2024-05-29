@@ -57,7 +57,7 @@ const GameProjectsInfo = {
       shortDesc:
         "Hyper casual 3d runner game prototype where one has to switch to different characters according to the obstacles in front. Compete concurrently with other AI players to establish your value.",
       codeLink: "#",
-      demoLink: "https://youtube.com/shorts/ZI1y73tJfw8?feature=share",
+      demoLink: "https://youtube.com/shorts/mWBc0a3u4Mw?feature=share",
       thumbnail: superHeroRun,
       projectUrl: "/superherorun",
     },
