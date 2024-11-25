@@ -15,7 +15,7 @@ const Main = () => {
             <h1 className="py-4">
               Hi, I&#39;m <span className="text-[#0e7490]"> Anmol</span>
             </h1>
-            <h2 className="py-2">Unity Game Programmer & Developer</h2>
+            <h2 className="py-2">Unity Developer</h2>
             <p className="py-4 sm:max-w-[70%] m-auto text-xl">
               I’m focused on building responsive games integrating back-end
               technologies.
@@ -49,7 +49,7 @@ const Main = () => {
             <div className="py-3 justify-center flex">
               <a
                 className="resume-button"
-                href="https://drive.google.com/file/d/13aYpHmtiDrqAmMF6lQlsCKMATyc-pEb1/view?usp=sharing"
+                href="https://drive.google.com/file/d/17NlfVXPvoa1KT4cFRTjpxvOpB1vTYkph/view?usp=sharing"
                 target="_blank"
               >
                 Resume
