@@ -31,7 +31,7 @@ const Main = () => {
                 </div>
               </a>
               <a
-                href="https://github.com/anmol20goyal?tab=repositories"
+                href="https://github.com/anmol07goyal?tab=repositories"
                 target="_blank"
                 rel="noreferrer"
               >
